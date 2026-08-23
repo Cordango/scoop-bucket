@@ -1,0 +1,37 @@
+# Keeps bucket/cordango.json current without anybody remembering to.
+#
+# The manifest carries `checkver` and `autoupdate`; this is what runs them. Excavator asks GitHub for
+# the latest cordango release, rewrites the version and both hashes from that release's own
+# SHA256SUMS, and commits. Without it the manifest sits at whatever version it was last edited by
+# hand — and a bucket that is a release behind is worse than no bucket, because somebody installs it
+# and reports a bug that was fixed a month ago.
+#
+# Daily rather than the half-hourly the Scoop docs suggest: this project releases on the order of
+# weeks, and a scheduled job that runs 48 times a day to do nothing is 48 chances to be rate-limited
+# on the one day it matters.
+
+name: Excavator
+
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  # The bot commits the rewritten manifest back to this branch. That is the whole grant.
+  contents: write
+
+jobs:
+  excavate:
+    # Windows because the Scoop tooling this action drives is PowerShell and expects it.
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ScoopInstaller/GithubActions@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Say nothing when there is nothing to do, rather than committing an empty change or
+          # opening an issue on every quiet day.
+          SKIP_UPDATED: '1'
