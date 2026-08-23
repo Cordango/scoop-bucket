@@ -36,6 +36,12 @@ The manifest is generated from [cordango/cordango](https://github.com/cordango/c
 `packaging/scoop/cordango.json`. Report anything wrong with the tool there; this repository is the
 delivery channel.
 
+## Documentation
+
+**[docs.cordango.com](https://docs.cordango.com)** — the [quickstart](https://docs.cordango.com/quickstart),
+every [CLI command](https://docs.cordango.com/cli/install), and the
+[concepts](https://docs.cordango.com/concepts) behind the language.
+
 ## Other ways to install
 
 ```powershell
