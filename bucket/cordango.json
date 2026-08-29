@@ -17,19 +17,19 @@
         "No dependency on .NET. The binary is self-contained and carries its own runtime."
     ],
 
-    "version": "0.6.0",
+    "version": "0.6.1",
     "description": "Compile an App Definition into a complete application you own: ASP.NET Core, EF Core, PostgreSQL, Vue 3.",
     "homepage": "https://github.com/cordango/cordango",
     "license": "Apache-2.0",
 
     "architecture": {
         "64bit": {
-            "url": "https://github.com/cordango/cordango/releases/download/v0.6.0/cordango-0.6.0-win-x64.zip",
-            "hash": "287aaa5851e1c06dcf19e204b03c620e753eda8105a442c1e1220e4afef6ec31"
+            "url": "https://github.com/cordango/cordango/releases/download/v0.6.1/cordango-0.6.1-win-x64.zip",
+            "hash": "3776f6506371476fcbfc30dbcb6b2a46747d1487f24f654ed5cd47dc304b2080"
         },
         "arm64": {
-            "url": "https://github.com/cordango/cordango/releases/download/v0.6.0/cordango-0.6.0-win-arm64.zip",
-            "hash": "9c79b4001b2ee57aa1046d620c224ddd64a43dc4102ad57b8def6bd3490f8b47"
+            "url": "https://github.com/cordango/cordango/releases/download/v0.6.1/cordango-0.6.1-win-arm64.zip",
+            "hash": "c6bad4aec6514fa97becb61f846f836c69b587cf11242e7681cafb87c639c1c1"
         }
     },
 
