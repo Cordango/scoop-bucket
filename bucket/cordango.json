@@ -16,29 +16,24 @@
         "",
         "No dependency on .NET. The binary is self-contained and carries its own runtime."
     ],
-
-    "version": "0.7.3",
+    "version": "0.8.0",
     "description": "Compile an App Definition into a complete application you own: ASP.NET Core, EF Core, PostgreSQL, Vue 3.",
     "homepage": "https://github.com/cordango/cordango",
     "license": "Apache-2.0",
-
     "architecture": {
         "64bit": {
-            "url": "https://github.com/cordango/cordango/releases/download/v0.7.3/cordango-0.7.3-win-x64.zip",
-            "hash": "185a13406f08823bb7c15e61bb168639a7d07e5052604e6fc14b224419729bd6"
+            "url": "https://github.com/cordango/cordango/releases/download/v0.8.0/cordango-0.8.0-win-x64.zip",
+            "hash": "24408130af0248e4c003e94a2600a5bbb2ad308870a5fea849e0bf79343d33bb"
         },
         "arm64": {
-            "url": "https://github.com/cordango/cordango/releases/download/v0.7.3/cordango-0.7.3-win-arm64.zip",
-            "hash": "0981fadd3980f3cbe1dff1115ab3dfeb15e1f631deb6ed320a99424002834969"
+            "url": "https://github.com/cordango/cordango/releases/download/v0.8.0/cordango-0.8.0-win-arm64.zip",
+            "hash": "64aa4c06a72aa9d2e71fcd732964aa5cb20f47559b525c61defa2f489893b581"
         }
     },
-
     "bin": "cordango.exe",
-
     "checkver": {
         "github": "https://github.com/cordango/cordango"
     },
-
     "autoupdate": {
         "architecture": {
             "64bit": {
